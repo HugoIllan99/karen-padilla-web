@@ -30,8 +30,9 @@
         <li><a href="#precios">Precios</a></li>
         <li><a href="#proceso">Tratamiento</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <a class="nav-cta" href="#contacto" target="_blank" rel="noopener">Agendar cita</a>
+      <a class="nav-cta" href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan" target="_blank" rel="noopener">Agendar cita</a>
     </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -49,7 +50,7 @@
       <h1>Cuidado especializado <em>del dolor</em>, hasta la raíz.</h1>
       <p class="lead">Tratamiento de conductos, manejo del dolor dental y traumatismos, con un enfoque clínico centrado en preservar tu pieza natural — para niños y adultos.</p>
       <div class="hero-actions">
-        <a class="btn-primary" href="#contacto" target="_blank" rel="noopener">Agendar consulta →</a>
+        <a class="btn-primary" href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan" target="_blank" rel="noopener">Agendar consulta →</a>
         <a class="btn-ghost" href="#servicios">Ver especialidades</a>
       </div>
     </div>
@@ -61,7 +62,11 @@
     </div>
     <div class="item">
       <span class="val">Endodoncia</span>
-      <span class="lbl">Especialidad</span>
+      <span class="lbl">Especialidad UdeG</span>
+    </div>
+    <div class="item">
+      <span class="val">12077765</span>
+      <span class="lbl">Cédula profesional</span>
     </div>
   </div>
 </section>
@@ -72,6 +77,58 @@
   <span class="rule"></span>
 </div>
 
+<style>
+  .service-index{display:grid; grid-template-columns:1fr 1fr; column-gap:64px;}
+  @media(max-width:760px){.service-index{grid-template-columns:1fr;}}
+  .service-col{display:flex; flex-direction:column;}
+  .service-row{
+    display:flex;
+    align-items:flex-start;
+    gap:24px;
+    padding:26px 20px;
+    margin:0 -20px;
+    border-top:1px solid #E4E1DC;
+    border-radius:10px;
+    transition:background .25s ease;
+  }
+  .service-col .service-row:last-child{border-bottom:1px solid #E4E1DC;}
+  .service-row:hover{background:#FFFFFF;}
+  .service-row .idx-wrap{
+    display:flex;
+    align-items:stretch;
+    gap:20px;
+    min-width:66px;
+  }
+  .service-row .idx{
+    font-family:'Fraunces', serif;
+    font-style:italic;
+    font-weight:300;
+    font-size:2.1rem;
+    line-height:1;
+    color:#D5BC96;
+    transition:color .3s ease;
+  }
+  .service-row:hover .idx{color:#C49A4D;}
+  .service-row .idx-rule{
+    width:1px;
+    background:#D9CBA8;
+    align-self:stretch;
+    transition:background .3s ease, width .3s ease;
+  }
+  .service-row:hover .idx-rule{background:#C49A4D; width:2px;}
+  .service-row .tag{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.62rem;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:#C49A4D;
+    margin-bottom:6px;
+    opacity:0.85;
+  }
+  .service-row h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem; margin:0 0 8px; color:#4B4B4B;}
+  .service-row p{font-family:'Work Sans', sans-serif; font-size:0.92rem; color:#8B9095; margin:0; line-height:1.6;}
+</style>
 <section class="services" id="servicios">
   <div class="wrap">
     <div class="section-head reveal">
@@ -79,36 +136,58 @@
       <h2>Experiencia clínica enfocada en el origen del dolor dental</h2>
       <p>Diagnóstico y tratamiento de la patología pulpar y periapical, con protocolos adaptados a cada paciente.</p>
     </div>
-    <div class="service-grid reveal">
-      <div class="service-card">
-        <span class="num">01</span>
-        <h3>Manejo del dolor</h3>
-        <p>Diagnóstico preciso del origen del dolor dental y tratamiento oportuno para un alivio efectivo.</p>
+    <div class="service-index reveal">
+      <div class="service-col">
+        <div class="service-row">
+          <span class="idx-wrap"><span class="idx">01</span><span class="idx-rule"></span></span>
+          <div>
+            <span class="tag">Diagnóstico</span>
+            <h3>Manejo del dolor</h3>
+            <p>Diagnóstico preciso del origen del dolor dental y tratamiento oportuno para un alivio efectivo.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx-wrap"><span class="idx">02</span><span class="idx-rule"></span></span>
+          <div>
+            <span class="tag">Urgencia</span>
+            <h3>Traumatismo dental</h3>
+            <p>Atención de urgencia y seguimiento clínico ante golpes, fracturas o luxaciones dentales.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx-wrap"><span class="idx">03</span><span class="idx-rule"></span></span>
+          <div>
+            <span class="tag">Endodoncia</span>
+            <h3>Patología pulpar</h3>
+            <p>Tratamiento de conductos y preservación de la pieza dental afectada por inflamación o infección de la pulpa.</p>
+          </div>
+        </div>
       </div>
-      <div class="service-card">
-        <span class="num">02</span>
-        <h3>Traumatismo dental</h3>
-        <p>Atención de urgencia y seguimiento clínico ante golpes, fracturas o luxaciones dentales.</p>
-      </div>
-      <div class="service-card">
-        <span class="num">03</span>
-        <h3>Patología pulpar</h3>
-        <p>Tratamiento de conductos y preservación de la pieza dental afectada por inflamación o infección de la pulpa.</p>
-      </div>
-      <div class="service-card">
-        <span class="num">04</span>
-        <h3>Patología periapical</h3>
-        <p>Diagnóstico y resolución de infecciones y lesiones alrededor de la raíz dental.</p>
-      </div>
-      <div class="service-card">
-        <span class="num">05</span>
-        <h3>Prevención</h3>
-        <p>Evaluación clínica y radiográfica para detectar y prevenir complicaciones antes de que avancen.</p>
-      </div>
-      <div class="service-card">
-        <span class="num">06</span>
-        <h3>Odontopediatría endodóntica</h3>
-        <p>Tratamiento adaptado a las necesidades particulares de pacientes infantiles.</p>
+      <div class="service-col">
+        <div class="service-row">
+          <span class="idx-wrap"><span class="idx">04</span><span class="idx-rule"></span></span>
+          <div>
+            <span class="tag">Endodoncia</span>
+            <h3>Patología periapical</h3>
+            <p>Diagnóstico y resolución de infecciones y lesiones alrededor de la raíz dental.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx-wrap"><span class="idx">05</span><span class="idx-rule"></span></span>
+          <div>
+            <span class="tag">Seguimiento</span>
+            <h3>Prevención</h3>
+            <p>Evaluación clínica y radiográfica para detectar y prevenir complicaciones antes de que avancen.</p>
+          </div>
+        </div>
+        <div class="service-row">
+          <span class="idx-wrap"><span class="idx">06</span><span class="idx-rule"></span></span>
+          <div>
+            <span class="tag">Pediátrico</span>
+            <h3>Odontopediatría endodóntica</h3>
+            <p>Tratamiento adaptado a las necesidades particulares de pacientes infantiles.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -118,7 +197,7 @@
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Tarifas de referencia</span>
-      <h1>Servicios y precioss</h1>
+      <h2>Servicios y precios</h2>
       <p>Precios para pacientes sin aseguradora. El listado completo, con más detalle por procedimiento, está disponible en el perfil verificado de Doctoralia.</p>
     </div>
 
@@ -126,12 +205,12 @@
       <div class="price-feature-card">
         <span class="pf-label">Primera cita</span>
         <span class="pf-name">Primera visita Odontología</span>
-        <span class="pf-price"></span>
+        <span class="pf-price">$300</span>
       </div>
       <div class="price-feature-card">
         <span class="pf-label">Endodoncia</span>
         <span class="pf-name">Consulta endodóntica y acceso</span>
-        <span class="pf-price"></span>
+        <span class="pf-price">$2,000</span>
       </div>
     </div>
 
@@ -150,7 +229,7 @@
       </div>
     </div>
 
-    
+    <p class="price-note reveal">+ 6 servicios adicionales y el detalle de cada procedimiento en el perfil de Doctoralia. <a href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan#profile-pricing" target="_blank" rel="noopener">Ver todos los servicios y precios →</a></p>
   </div>
 </section>
 
@@ -202,7 +281,7 @@
           <h2>Dra. Karen Padilla</h2>
           <p>Especialista en Endodoncia egresada de la Universidad de Guadalajara, con experiencia clínica en el manejo del dolor, el traumatismo dental y el tratamiento de la patología pulpar y periapical.</p>
           <p>Atiende tanto a pacientes adultos como infantiles, con un enfoque centrado en la prevención y en preservar la pieza dental natural siempre que sea posible.</p>
-          <p class="credential-footnote">Formación: Universidad de Guadalajara · Universidad Estatal Paulista</p>
+          <p class="credential-footnote">Formación: Universidad de Guadalajara · Universidad Estatal Paulista<br>Cédula profesional: 12077765</p>
         </div>
         <ul class="credential-list">
           <li>
@@ -269,6 +348,10 @@
         <div class="contact-line">
           <span class="lbl">Horario</span>
           <span>[ Agrega tu horario de atención ]</span>
+        </div>
+        <div class="contact-line">
+          <span class="lbl">Reservas</span>
+          <span><a href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan" target="_blank" rel="noopener" style="color:var(--clay-deep); text-decoration:underline; text-underline-offset:3px;">Agendar en Doctoralia →</a></span>
         </div>
       </div>
       <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('formMsg').textContent='Mensaje enviado. Te contactaremos pronto.';">
