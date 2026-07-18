@@ -778,7 +778,7 @@
   }
   .hero-divider .rule{
     width:96px;
-    height:1px;
+    height:3px;
     background:linear-gradient(to right, transparent, var(--clay), transparent);
   }
   .hero-divider .dot{
