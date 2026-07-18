@@ -27,6 +27,7 @@
     <div class="nav-links" id="navLinks">
       <ul>
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#equipo">Equipo</a></li>
         <li><a href="#precios">Precios</a></li>
         <li><a href="#proceso">Tratamiento</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
@@ -148,8 +149,16 @@
     opacity:0;
     transition:max-height .35s ease, opacity .3s ease, margin-top .35s ease;
   }
-  .service-row.open .service-desc{max-height:160px; opacity:1; margin-top:12px;}
+  .service-row.open .service-desc{max-height:220px; opacity:1; margin-top:12px;}
   .service-row p{font-family:'Work Sans', sans-serif; font-size:0.92rem; color:#8B9095; margin:0; line-height:1.6;}
+  .service-row ul.svc-list{margin:0; padding:0 0 0 16px; font-family:'Work Sans', sans-serif; font-size:0.92rem; color:#8B9095; line-height:1.7;}
+  .team-name{
+    display:block;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:#8B9095;
+    margin-top:2px;
+  }
 </style>
 <section class="services" id="servicios">
   <div class="wrap">
@@ -260,6 +269,92 @@
               </div>
               <div class="service-desc">
                 <p>Tratamiento adaptado a las necesidades particulares de pacientes infantiles.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="equipo" style="background:#F1E8DE;">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Nuestro equipo</span>
+      <h2>Otras especialidades disponibles en este consultorio</h2>
+      <p>Además de la Dra. Padilla, en este consultorio atienden especialistas en las siguientes áreas. Haz clic en cada una para ver qué tratamientos realizan.</p>
+    </div>
+    <div class="service-index reveal">
+      <div class="service-col">
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">OR</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Ortodoncia</span>
+                  <h3>Especialista en Ortodoncia</h3>
+                  <span class="team-name">Nombre próximamente</span>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <ul class="svc-list">
+                  <li>Brackets metálicos y estéticos</li>
+                  <li>Alineadores invisibles</li>
+                  <li>Ortodoncia interceptiva en niños</li>
+                  <li>Retenedores y control post-tratamiento</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">PE</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Periodoncia</span>
+                  <h3>Especialista en Periodoncia</h3>
+                  <span class="team-name">Nombre próximamente</span>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <ul class="svc-list">
+                  <li>Tratamiento de encías y periodontitis</li>
+                  <li>Limpieza profunda (curetaje)</li>
+                  <li>Cirugía periodontal</li>
+                  <li>Injertos de encía</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="service-col">
+        
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">PR</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Prostodoncia</span>
+                  <h3>Especialista en Prostodoncia</h3>
+                  <span class="team-name">Nombre próximamente</span>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <ul class="svc-list">
+                  <li>Coronas y puentes dentales</li>
+                  <li>Prótesis removibles y totales</li>
+                  <li>Rehabilitación oral completa</li>
+                  <li>Prótesis sobre implantes</li>
+                </ul>
               </div>
             </div>
           </div>
