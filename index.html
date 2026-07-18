@@ -30,9 +30,8 @@
         <li><a href="#precios">Precios</a></li>
         <li><a href="#proceso">Tratamiento</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
-        <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <a class="nav-cta" href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan" target="_blank" rel="noopener">Agendar cita</a>
+      <a class="nav-cta" href="#contacto" target="_blank" rel="noopener">Agendar cita</a>
     </div>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
       <span></span><span></span><span></span>
@@ -50,7 +49,7 @@
       <h1>Cuidado especializado <em>del dolor</em>, hasta la raíz.</h1>
       <p class="lead">Tratamiento de conductos, manejo del dolor dental y traumatismos, con un enfoque clínico centrado en preservar tu pieza natural — para niños y adultos.</p>
       <div class="hero-actions">
-        <a class="btn-primary" href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan" target="_blank" rel="noopener">Agendar consulta →</a>
+        <a class="btn-primary" href="#contacto" target="_blank" rel="noopener">Agendar consulta →</a>
         <a class="btn-ghost" href="#servicios">Ver especialidades</a>
       </div>
     </div>
@@ -62,11 +61,7 @@
     </div>
     <div class="item">
       <span class="val">Endodoncia</span>
-      <span class="lbl">Especialidad UdeG</span>
-    </div>
-    <div class="item">
-      <span class="val">12077765</span>
-      <span class="lbl">Cédula profesional</span>
+      <span class="lbl">Especialidad</span>
     </div>
   </div>
 </section>
@@ -77,84 +72,6 @@
   <span class="rule"></span>
 </div>
 
-<style>
-  .service-index{display:grid; grid-template-columns:1fr 1fr; column-gap:64px;}
-  @media(max-width:760px){.service-index{grid-template-columns:1fr;}}
-  .service-col{display:flex; flex-direction:column;}
-  .service-row{
-    padding:26px 20px;
-    margin:0 -20px;
-    border-top:1px solid #E4E1DC;
-    border-radius:10px;
-    transition:background .25s ease;
-    cursor:pointer;
-  }
-  .service-col .service-row:last-child{border-bottom:1px solid #E4E1DC;}
-  .service-row:hover{background:#FFFFFF;}
-  .service-row.open{background:#FFFFFF;}
-  .service-row-head{
-    display:flex;
-    align-items:flex-start;
-    gap:24px;
-  }
-  .service-row .idx-wrap{
-    display:flex;
-    align-items:stretch;
-    gap:20px;
-    min-width:66px;
-  }
-  .service-row .idx{
-    font-family:'Fraunces', serif;
-    font-style:italic;
-    font-weight:300;
-    font-size:2.1rem;
-    line-height:1;
-    color:#D5BC96;
-    transition:color .3s ease;
-  }
-  .service-row:hover .idx, .service-row.open .idx{color:#C49A4D;}
-  .service-row .idx-rule{
-    width:1px;
-    background:#D9CBA8;
-    align-self:stretch;
-    transition:background .3s ease, width .3s ease;
-  }
-  .service-row:hover .idx-rule, .service-row.open .idx-rule{background:#C49A4D; width:2px;}
-  .service-row-body{flex:1; min-width:0;}
-  .service-row-top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px;}
-  .service-row .tag{
-    display:block;
-    font-family:'IBM Plex Mono', monospace;
-    font-size:0.76rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:#C49A4D;
-    margin-bottom:8px;
-    font-weight:500;
-  }
-  .service-row h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem; margin:0; color:#4B4B4B;}
-  .service-row .chevron{
-    width:26px; height:26px;
-    min-width:26px;
-    border-radius:50%;
-    border:1px solid #D9CBA8;
-    display:flex; align-items:center; justify-content:center;
-    color:#A87D3C;
-    font-size:0.9rem;
-    line-height:1;
-    transition:transform .3s ease, background .25s ease, border-color .25s ease;
-    margin-top:2px;
-  }
-  .service-row.open .chevron{transform:rotate(45deg); background:#C49A4D; border-color:#C49A4D; color:#fff;}
-  .service-desc{
-    max-height:0;
-    overflow:hidden;
-    opacity:0;
-    transition:max-height .35s ease, opacity .3s ease, margin-top .35s ease;
-  }
-  .service-row.open .service-desc{max-height:160px; opacity:1; margin-top:12px;}
-  .service-row p{font-family:'Work Sans', sans-serif; font-size:0.92rem; color:#8B9095; margin:0; line-height:1.6;}
-</style>
 <section class="services" id="servicios">
   <div class="wrap">
     <div class="section-head reveal">
@@ -162,138 +79,46 @@
       <h2>Experiencia clínica enfocada en el origen del dolor dental</h2>
       <p>Diagnóstico y tratamiento de la patología pulpar y periapical, con protocolos adaptados a cada paciente.</p>
     </div>
-    <div class="service-index reveal">
-      <div class="service-col">
-        <div class="service-row" onclick="toggleService(this)">
-          <div class="service-row-head">
-            <span class="idx-wrap"><span class="idx">01</span><span class="idx-rule"></span></span>
-            <div class="service-row-body">
-              <div class="service-row-top">
-                <div>
-                  <span class="tag">Diagnóstico</span>
-                  <h3>Manejo del dolor</h3>
-                </div>
-                <span class="chevron">+</span>
-              </div>
-              <div class="service-desc">
-                <p>Diagnóstico preciso del origen del dolor dental y tratamiento oportuno para un alivio efectivo.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="service-row" onclick="toggleService(this)">
-          <div class="service-row-head">
-            <span class="idx-wrap"><span class="idx">02</span><span class="idx-rule"></span></span>
-            <div class="service-row-body">
-              <div class="service-row-top">
-                <div>
-                  <span class="tag">Urgencia</span>
-                  <h3>Traumatismo dental</h3>
-                </div>
-                <span class="chevron">+</span>
-              </div>
-              <div class="service-desc">
-                <p>Atención de urgencia y seguimiento clínico ante golpes, fracturas o luxaciones dentales.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="service-row" onclick="toggleService(this)">
-          <div class="service-row-head">
-            <span class="idx-wrap"><span class="idx">03</span><span class="idx-rule"></span></span>
-            <div class="service-row-body">
-              <div class="service-row-top">
-                <div>
-                  <span class="tag">Endodoncia</span>
-                  <h3>Patología pulpar</h3>
-                </div>
-                <span class="chevron">+</span>
-              </div>
-              <div class="service-desc">
-                <p>Tratamiento de conductos y preservación de la pieza dental afectada por inflamación o infección de la pulpa.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div class="service-grid reveal">
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3>Manejo del dolor</h3>
+        <p>Diagnóstico preciso del origen del dolor dental y tratamiento oportuno para un alivio efectivo.</p>
       </div>
-      <div class="service-col">
-        <div class="service-row" onclick="toggleService(this)">
-          <div class="service-row-head">
-            <span class="idx-wrap"><span class="idx">04</span><span class="idx-rule"></span></span>
-            <div class="service-row-body">
-              <div class="service-row-top">
-                <div>
-                  <span class="tag">Endodoncia</span>
-                  <h3>Patología periapical</h3>
-                </div>
-                <span class="chevron">+</span>
-              </div>
-              <div class="service-desc">
-                <p>Diagnóstico y resolución de infecciones y lesiones alrededor de la raíz dental.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="service-row" onclick="toggleService(this)">
-          <div class="service-row-head">
-            <span class="idx-wrap"><span class="idx">05</span><span class="idx-rule"></span></span>
-            <div class="service-row-body">
-              <div class="service-row-top">
-                <div>
-                  <span class="tag">Seguimiento</span>
-                  <h3>Prevención</h3>
-                </div>
-                <span class="chevron">+</span>
-              </div>
-              <div class="service-desc">
-                <p>Evaluación clínica y radiográfica para detectar y prevenir complicaciones antes de que avancen.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="service-row" onclick="toggleService(this)">
-          <div class="service-row-head">
-            <span class="idx-wrap"><span class="idx">06</span><span class="idx-rule"></span></span>
-            <div class="service-row-body">
-              <div class="service-row-top">
-                <div>
-                  <span class="tag">Pediátrico</span>
-                  <h3>Odontopediatría endodóntica</h3>
-                </div>
-                <span class="chevron">+</span>
-              </div>
-              <div class="service-desc">
-                <p>Tratamiento adaptado a las necesidades particulares de pacientes infantiles.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3>Traumatismo dental</h3>
+        <p>Atención de urgencia y seguimiento clínico ante golpes, fracturas o luxaciones dentales.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3>Patología pulpar</h3>
+        <p>Tratamiento de conductos y preservación de la pieza dental afectada por inflamación o infección de la pulpa.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">04</span>
+        <h3>Patología periapical</h3>
+        <p>Diagnóstico y resolución de infecciones y lesiones alrededor de la raíz dental.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">05</span>
+        <h3>Prevención</h3>
+        <p>Evaluación clínica y radiográfica para detectar y prevenir complicaciones antes de que avancen.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">06</span>
+        <h3>Odontopediatría endodóntica</h3>
+        <p>Tratamiento adaptado a las necesidades particulares de pacientes infantiles.</p>
       </div>
     </div>
   </div>
 </section>
 
-<script>
-  function toggleService(row){
-    var isOpen = row.classList.contains('open');
-    document.querySelectorAll('.service-row.open').forEach(function(r){
-      r.classList.remove('open');
-      var chev = r.querySelector('.chevron');
-      if(chev) chev.textContent = '+';
-    });
-    if(!isOpen){
-      row.classList.add('open');
-      var chev = row.querySelector('.chevron');
-      if(chev) chev.textContent = '+';
-    }
-  }
-</script>
-
 <section class="pricing" id="precios">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Tarifas de referencia</span>
-      <h2>Servicios y precios</h2>
+      <h1>Servicios y precioss</h1>
       <p>Precios para pacientes sin aseguradora. El listado completo, con más detalle por procedimiento, está disponible en el perfil verificado de Doctoralia.</p>
     </div>
 
@@ -301,12 +126,12 @@
       <div class="price-feature-card">
         <span class="pf-label">Primera cita</span>
         <span class="pf-name">Primera visita Odontología</span>
-        <span class="pf-price">$300</span>
+        <span class="pf-price"></span>
       </div>
       <div class="price-feature-card">
         <span class="pf-label">Endodoncia</span>
         <span class="pf-name">Consulta endodóntica y acceso</span>
-        <span class="pf-price">$2,000</span>
+        <span class="pf-price"></span>
       </div>
     </div>
 
@@ -325,7 +150,7 @@
       </div>
     </div>
 
-    <p class="price-note reveal">+ 6 servicios adicionales y el detalle de cada procedimiento en el perfil de Doctoralia. <a href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan#profile-pricing" target="_blank" rel="noopener">Ver todos los servicios y precios →</a></p>
+    
   </div>
 </section>
 
@@ -337,28 +162,51 @@
     </div>
     <div class="process-list reveal">
       <div class="process-item">
-        <span class="step-num">01</span>
+        <span class="step-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10.5" cy="10.5" r="6" stroke="#A87D3C" stroke-width="1.5"/>
+            <path d="m15 15 5.5 5.5" stroke="#A87D3C" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M10.5 7.5v6M7.5 10.5h6" stroke="#A87D3C" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </span>
         <div>
           <h3>Evaluación y diagnóstico</h3>
           <p>Revisión clínica y radiográfica para identificar el origen exacto del dolor o la lesión.</p>
         </div>
       </div>
       <div class="process-item">
-        <span class="step-num">02</span>
+        <span class="step-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="5" y="4.5" width="14" height="16" rx="2" stroke="#A87D3C" stroke-width="1.5"/>
+            <path d="M9 4.5V4a1.5 1.5 0 0 1 1.5-1.5h3A1.5 1.5 0 0 1 15 4v.5" stroke="#A87D3C" stroke-width="1.5"/>
+            <path d="M8.5 11h7M8.5 14.5h7M8.5 18h4" stroke="#A87D3C" stroke-width="1.3" stroke-linecap="round"/>
+          </svg>
+        </span>
         <div>
           <h3>Plan de tratamiento</h3>
           <p>Explicación clara de las opciones, tiempos y cuidados según cada caso, niño o adulto.</p>
         </div>
       </div>
       <div class="process-item">
-        <span class="step-num">03</span>
+        <span class="step-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 3.2c-3.3 0-5.2 2-5.4 4.8-.1 2 .7 3.3 1 5 .2 1.4.5 3 1.4 3 .9 0 1-1.5 1.1-2.8.1-1.1.4-1.7 1.9-1.7s1.8.6 1.9 1.7c.1 1.3.2 2.8 1.1 2.8.4 0 .7-.3.9-.8" stroke="#A87D3C" stroke-width="1.4"/>
+            <path d="M17 4.5v6M14.5 7h5" stroke="#A87D3C" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </span>
         <div>
           <h3>Tratamiento especializado</h3>
           <p>Procedimiento de endodoncia o manejo de trauma, priorizando la comodidad del paciente.</p>
         </div>
       </div>
       <div class="process-item">
-        <span class="step-num">04</span>
+        <span class="step-num">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="5" width="16" height="15" rx="2" stroke="#A87D3C" stroke-width="1.5"/>
+            <path d="M4 9.5h16M8 3.5v3M16 3.5v3" stroke="#A87D3C" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="m8.5 14 2 2 4-4.2" stroke="#A87D3C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
         <div>
           <h3>Seguimiento</h3>
           <p>Control posterior para confirmar la recuperación y prevenir nuevas complicaciones.</p>
@@ -377,7 +225,7 @@
           <h2>Dra. Karen Padilla</h2>
           <p>Especialista en Endodoncia egresada de la Universidad de Guadalajara, con experiencia clínica en el manejo del dolor, el traumatismo dental y el tratamiento de la patología pulpar y periapical.</p>
           <p>Atiende tanto a pacientes adultos como infantiles, con un enfoque centrado en la prevención y en preservar la pieza dental natural siempre que sea posible.</p>
-          <p class="credential-footnote">Formación: Universidad de Guadalajara · Universidad Estatal Paulista<br>Cédula profesional: 12077765</p>
+          <p class="credential-footnote">Formación: Universidad de Guadalajara · Universidad Estatal Paulista</p>
         </div>
         <ul class="credential-list">
           <li>
@@ -444,10 +292,6 @@
         <div class="contact-line">
           <span class="lbl">Horario</span>
           <span>[ Agrega tu horario de atención ]</span>
-        </div>
-        <div class="contact-line">
-          <span class="lbl">Reservas</span>
-          <span><a href="https://www.doctoralia.com.mx/karen-adriana-padilla-sanchez/dentista-odontologo/etzatlan" target="_blank" rel="noopener" style="color:var(--clay-deep); text-decoration:underline; text-underline-offset:3px;">Agendar en Doctoralia →</a></span>
         </div>
       </div>
       <form onsubmit="event.preventDefault(); this.reset(); document.getElementById('formMsg').textContent='Mensaje enviado. Te contactaremos pronto.';">
