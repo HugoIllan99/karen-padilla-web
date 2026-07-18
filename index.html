@@ -82,17 +82,21 @@
   @media(max-width:760px){.service-index{grid-template-columns:1fr;}}
   .service-col{display:flex; flex-direction:column;}
   .service-row{
-    display:flex;
-    align-items:flex-start;
-    gap:24px;
     padding:26px 20px;
     margin:0 -20px;
     border-top:1px solid #E4E1DC;
     border-radius:10px;
     transition:background .25s ease;
+    cursor:pointer;
   }
   .service-col .service-row:last-child{border-bottom:1px solid #E4E1DC;}
   .service-row:hover{background:#FFFFFF;}
+  .service-row.open{background:#FFFFFF;}
+  .service-row-head{
+    display:flex;
+    align-items:flex-start;
+    gap:24px;
+  }
   .service-row .idx-wrap{
     display:flex;
     align-items:stretch;
@@ -108,25 +112,47 @@
     color:#D5BC96;
     transition:color .3s ease;
   }
-  .service-row:hover .idx{color:#C49A4D;}
+  .service-row:hover .idx, .service-row.open .idx{color:#C49A4D;}
   .service-row .idx-rule{
     width:1px;
     background:#D9CBA8;
     align-self:stretch;
     transition:background .3s ease, width .3s ease;
   }
-  .service-row:hover .idx-rule{background:#C49A4D; width:2px;}
+  .service-row:hover .idx-rule, .service-row.open .idx-rule{background:#C49A4D; width:2px;}
+  .service-row-body{flex:1; min-width:0;}
+  .service-row-top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px;}
   .service-row .tag{
     display:block;
     font-family:'IBM Plex Mono', monospace;
-    font-size:0.62rem;
-    letter-spacing:0.1em;
+    font-size:0.76rem;
+    letter-spacing:0.08em;
     text-transform:uppercase;
     color:#C49A4D;
-    margin-bottom:6px;
-    opacity:0.85;
+    margin-bottom:8px;
+    font-weight:500;
   }
-  .service-row h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem; margin:0 0 8px; color:#4B4B4B;}
+  .service-row h3{font-family:'Fraunces', serif; font-weight:500; font-size:1.05rem; margin:0; color:#4B4B4B;}
+  .service-row .chevron{
+    width:26px; height:26px;
+    min-width:26px;
+    border-radius:50%;
+    border:1px solid #D9CBA8;
+    display:flex; align-items:center; justify-content:center;
+    color:#A87D3C;
+    font-size:0.9rem;
+    line-height:1;
+    transition:transform .3s ease, background .25s ease, border-color .25s ease;
+    margin-top:2px;
+  }
+  .service-row.open .chevron{transform:rotate(45deg); background:#C49A4D; border-color:#C49A4D; color:#fff;}
+  .service-desc{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition:max-height .35s ease, opacity .3s ease, margin-top .35s ease;
+  }
+  .service-row.open .service-desc{max-height:160px; opacity:1; margin-top:12px;}
   .service-row p{font-family:'Work Sans', sans-serif; font-size:0.92rem; color:#8B9095; margin:0; line-height:1.6;}
 </style>
 <section class="services" id="servicios">
@@ -138,60 +164,130 @@
     </div>
     <div class="service-index reveal">
       <div class="service-col">
-        <div class="service-row">
-          <span class="idx-wrap"><span class="idx">01</span><span class="idx-rule"></span></span>
-          <div>
-            <span class="tag">Diagnóstico</span>
-            <h3>Manejo del dolor</h3>
-            <p>Diagnóstico preciso del origen del dolor dental y tratamiento oportuno para un alivio efectivo.</p>
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">01</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Diagnóstico</span>
+                  <h3>Manejo del dolor</h3>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <p>Diagnóstico preciso del origen del dolor dental y tratamiento oportuno para un alivio efectivo.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="service-row">
-          <span class="idx-wrap"><span class="idx">02</span><span class="idx-rule"></span></span>
-          <div>
-            <span class="tag">Urgencia</span>
-            <h3>Traumatismo dental</h3>
-            <p>Atención de urgencia y seguimiento clínico ante golpes, fracturas o luxaciones dentales.</p>
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">02</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Urgencia</span>
+                  <h3>Traumatismo dental</h3>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <p>Atención de urgencia y seguimiento clínico ante golpes, fracturas o luxaciones dentales.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="service-row">
-          <span class="idx-wrap"><span class="idx">03</span><span class="idx-rule"></span></span>
-          <div>
-            <span class="tag">Endodoncia</span>
-            <h3>Patología pulpar</h3>
-            <p>Tratamiento de conductos y preservación de la pieza dental afectada por inflamación o infección de la pulpa.</p>
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">03</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Endodoncia</span>
+                  <h3>Patología pulpar</h3>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <p>Tratamiento de conductos y preservación de la pieza dental afectada por inflamación o infección de la pulpa.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="service-col">
-        <div class="service-row">
-          <span class="idx-wrap"><span class="idx">04</span><span class="idx-rule"></span></span>
-          <div>
-            <span class="tag">Endodoncia</span>
-            <h3>Patología periapical</h3>
-            <p>Diagnóstico y resolución de infecciones y lesiones alrededor de la raíz dental.</p>
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">04</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Endodoncia</span>
+                  <h3>Patología periapical</h3>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <p>Diagnóstico y resolución de infecciones y lesiones alrededor de la raíz dental.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="service-row">
-          <span class="idx-wrap"><span class="idx">05</span><span class="idx-rule"></span></span>
-          <div>
-            <span class="tag">Seguimiento</span>
-            <h3>Prevención</h3>
-            <p>Evaluación clínica y radiográfica para detectar y prevenir complicaciones antes de que avancen.</p>
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">05</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Seguimiento</span>
+                  <h3>Prevención</h3>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <p>Evaluación clínica y radiográfica para detectar y prevenir complicaciones antes de que avancen.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="service-row">
-          <span class="idx-wrap"><span class="idx">06</span><span class="idx-rule"></span></span>
-          <div>
-            <span class="tag">Pediátrico</span>
-            <h3>Odontopediatría endodóntica</h3>
-            <p>Tratamiento adaptado a las necesidades particulares de pacientes infantiles.</p>
+        <div class="service-row" onclick="toggleService(this)">
+          <div class="service-row-head">
+            <span class="idx-wrap"><span class="idx">06</span><span class="idx-rule"></span></span>
+            <div class="service-row-body">
+              <div class="service-row-top">
+                <div>
+                  <span class="tag">Pediátrico</span>
+                  <h3>Odontopediatría endodóntica</h3>
+                </div>
+                <span class="chevron">+</span>
+              </div>
+              <div class="service-desc">
+                <p>Tratamiento adaptado a las necesidades particulares de pacientes infantiles.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  function toggleService(row){
+    var isOpen = row.classList.contains('open');
+    document.querySelectorAll('.service-row.open').forEach(function(r){
+      r.classList.remove('open');
+      var chev = r.querySelector('.chevron');
+      if(chev) chev.textContent = '+';
+    });
+    if(!isOpen){
+      row.classList.add('open');
+      var chev = row.querySelector('.chevron');
+      if(chev) chev.textContent = '+';
+    }
+  }
+</script>
 
 <section class="pricing" id="precios">
   <div class="wrap">
