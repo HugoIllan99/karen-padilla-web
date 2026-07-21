@@ -263,6 +263,45 @@
   }
 }
 
+/* Animación de entrada del hero al cargar la página */
+.hero-copy .eyebrow{opacity:0; animation:fadeUp .7s ease forwards .1s;}
+.hero h1{opacity:0; animation:fadeUp .7s ease forwards .25s;}
+.hero p.lead{opacity:0; animation:fadeUp .7s ease forwards .4s;}
+.hero-actions{opacity:0; animation:fadeUp .7s ease forwards .55s;}
+.hero-strip{opacity:0; animation:fadeUp .7s ease forwards .7s;}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(16px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* El diente de fondo del hero flota suavemente */
+.hero-watermark{animation:floatSlow 7s ease-in-out infinite;}
+@keyframes floatSlow{
+  0%, 100%{transform:translate(-50%,-50%) translateY(0);}
+  50%{transform:translate(-50%,-50%) translateY(-14px);}
+}
+
+/* El botón de WhatsApp respira para llamar la atención */
+.whatsapp-float{animation:pulse 2.4s ease-in-out infinite;}
+@keyframes pulse{
+  0%, 100%{box-shadow:0 6px 18px rgba(0,0,0,0.2), 0 0 0 0 rgba(37,211,102,0.5);}
+  50%{box-shadow:0 6px 18px rgba(0,0,0,0.2), 0 0 0 10px rgba(37,211,102,0);}
+}
+
+/* Los botones principales se "levantan" un poco más al pasar el cursor */
+.btn-primary, .btn-ghost, .nav-cta{transition:transform .25s ease, box-shadow .25s ease, background .25s ease, color .25s ease, border-color .25s ease !important;}
+.btn-primary:hover, .nav-cta:hover{transform:translateY(-2px) scale(1.02);}
+
+/* Las tarjetas de precio y proceso se elevan un poco más al pasar el cursor */
+.price-feature-card, .price-tag, .process-item{transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;}
+.price-feature-card:hover, .price-tag:hover{transform:translateY(-3px);}
+
+@media(prefers-reduced-motion: reduce){
+  .hero-copy .eyebrow, .hero h1, .hero p.lead, .hero-actions, .hero-strip{animation:none; opacity:1;}
+  .hero-watermark, .whatsapp-float{animation:none;}
+}
+
 </style>
 <section class="services" id="servicios">
   <div class="wrap">
