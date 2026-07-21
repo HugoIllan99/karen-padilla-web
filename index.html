@@ -204,6 +204,65 @@
   transition:transform .2s ease;
 }
 .whatsapp-float:hover{transform:scale(1.08);}
+
+@media(max-width:640px){
+  .wrap{padding:0 20px;}
+  header{padding:12px 12px 6px;}
+  nav.wrap{padding:8px 14px;}
+  .brand{font-size:0.9rem;}
+  .brand small{font-size:0.55rem;}
+
+  .hero{padding:90px 0 50px;}
+  .hero h1{font-size:1.9rem; line-height:1.15;}
+  .hero p.lead{font-size:0.98rem;}
+  .hero-actions{flex-direction:column; align-items:stretch;}
+  .hero-actions a{justify-content:center; text-align:center;}
+  .hero-strip{flex-direction:column;}
+  .hero-strip .item{border-right:none !important; border-top:1px solid #E4E1DC;}
+
+  section{padding:56px 0 !important;}
+  .section-head h2{font-size:1.5rem !important;}
+
+  .service-index{grid-template-columns:1fr !important; padding:14px !important;}
+  #equipo .idx{width:44px !important; height:44px !important; font-size:1.2rem !important;}
+  .service-row{margin:0 -10px !important; padding:22px 10px !important;}
+
+  .price-featured{grid-template-columns:1fr !important;}
+  .price-grid{grid-template-columns:1fr !important;}
+
+  .about-grid{grid-template-columns:1fr !important;}
+  .about-card{padding:28px 20px !important;}
+
+  .audience-grid{grid-template-columns:1fr !important;}
+
+  .contact-panel{grid-template-columns:1fr !important; padding:26px 18px !important;}
+
+  footer .wrap{flex-direction:column; text-align:center; gap:8px;}
+
+  .whatsapp-float{width:50px; height:50px; bottom:16px; right:16px;}
+  .whatsapp-float svg{width:24px; height:24px;}
+}
+
+@media(max-width:859px){
+  .nav-cta{
+    display:flex !important;
+    align-items:center;
+    justify-content:center;
+    width:100%;
+    margin-top:10px;
+    background:#C49A4D;
+    color:#fff;
+    font-size:0.76rem;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    padding:12px 24px;
+    border-radius:999px;
+    border:none;
+    text-decoration:none;
+    box-shadow:0 4px 12px rgba(75,75,75,0.07);
+  }
+}
+
 </style>
 <section class="services" id="servicios">
   <div class="wrap">
